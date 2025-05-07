@@ -1,6 +1,6 @@
-// PuzzleBoard.tsx
-import { usePuzzle } from "../hooks/usePuzzle"; // Importa el hook personalizado
+import { usePuzzle } from "../hooks/usePuzzle";
 import "./PuzzleBoard.css";
+import Congratulations from "./Congratulations";
 
 export default function PuzzleBoard() {
     const cant = 9; // Número de piezas
@@ -15,12 +15,6 @@ export default function PuzzleBoard() {
 
     return (
         <div className="board">
-            {isSolved && (
-                <div className="success-message">
-                    <p>¡Felicidades, lo has resuelto!</p>
-                    <button onClick={resetPuzzle}>Reiniciar</button>
-                </div>
-            )}
             {pieces.map((piece, index) => (
                 <div
                     key={index}
@@ -31,13 +25,15 @@ export default function PuzzleBoard() {
                     onDrop={() => handleDrop(index)}
                     style={{
                         backgroundImage: 'url("/puzzle.jpg")',
-                        backgroundSize: "300px 300px", // Tamaño total de la imagen
-                        backgroundPosition: getBackgroundPosition(piece - 1), // Posición de la pieza
+                        backgroundSize: "300px 300px",
+                        backgroundPosition: getBackgroundPosition(piece - 1),
                     }}
                 >
-                    {/* Ya no mostramos el número, solo la imagen dividida */}
+                    {/* Imagen sin número */}
                 </div>
             ))}
+
+            <Congratulations resetPuzzle={resetPuzzle} isSolved={isSolved} />
         </div>
     );
 }
