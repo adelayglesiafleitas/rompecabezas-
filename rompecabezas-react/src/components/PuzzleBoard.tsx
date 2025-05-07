@@ -28,7 +28,7 @@ export default function PuzzleBoard() {
     const handleDragStart = (index: number) => {
         setDraggedIndex(index);
     };
-
+    
     // Función para manejar la caída de una pieza en otra posición
     const handleDrop = (index: number) => {
         if (draggedIndex === null) return;
