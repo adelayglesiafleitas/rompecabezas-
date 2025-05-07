@@ -16,4 +16,23 @@
     background-position: center;
     cursor: grab;
   }
+  .success-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .success-message button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .success-message button:hover {
+    background-color: #45a049;
+  }
   
