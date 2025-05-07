@@ -3,12 +3,12 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <main>
       <h1 style={{ textAlign: "center" }}>
-        Rompecabezas Drag & Drop
+        Deisi
       </h1>
       <PuzzleBoard />
-    </div>
+    </main>
   );
 }
 
